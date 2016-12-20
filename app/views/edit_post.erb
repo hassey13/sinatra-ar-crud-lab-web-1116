@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Create a post</title>
+</head>
+
+<body>
+	<div style="margin: 0 auto; border: 1px solid black; width: 500px; text-align: center">
+		<h1>Create a new post!</h1>
+		<form method="POST" action="/posts/edit/<%=@post.id%>">
+			<input type="hidden" id="hidden" name="_method" value="patch">
+ 			<p>Post Header: <input name="post[update][name]" id="name" value="<%=@post.name%>"></p>
+ 			<p>Post Content: <input name="post[update][content]" id="content" value="<%=@post.content%>"></p>
+ 			<input type="submit" id="submit">
+		</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="/posts/new">Create a post </a>
+	<h1>Posts:</h1>
+
+	<% unless @posts.empty? %>
+	<% @posts.each do |post| %>
+
+		<div style="margin: 0 auto; border: 1px solid black; width: 500px; text-align: center">
+			<a href="/posts/show/<%=post.id%>"<h3>Post:</h3></a>
+			<ul>
+				<li><%= post.name %></li>
+				<li><%= post.content%></li>
+			</ul>
+		</div>
+	<% end %>
+	<% else %>
+		<h1>You have no posts --> <a href="/posts/new">Create a post </a></h1>
+	<% end %>
+</body>
+</html>

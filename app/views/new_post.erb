@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Create a post</title>
+</head>
+
+<body>
+	<div style="margin: 0 auto; border: 1px solid black; width: 500px; text-align: center">
+		<h1>Create a new post!</h1>
+		<form method="POST" action="/posts/new">
+ 			<p>Post Header: <input name="post[name]" id="name"></p>
+ 			<p>Post Content: <input name="post[content]" id="content"></p>
+ 			<input type="submit" id="submit">
+		</form>
+	</div>
+
+</body>
+</html>

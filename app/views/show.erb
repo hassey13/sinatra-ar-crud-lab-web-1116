@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Posts</title>
+</head>
+<body>
+	<div style="margin: 0 auto; border: 1px solid black; width: 500px; text-align: center">
+		<h3>Post:</h3>
+		<ul>
+			<li><%= @post.name %></li>
+			<li><%= @post.content%></li>
+		</ul>
+
+		<a href="/posts">See All Posts</a><br>
+    <a href="/posts/edit/<%=@post.id%>">Edit Post</a>
+
+    <form action="/posts/delete/<%=@post.id%>" method="POST" >
+      <input type="hidden" id="hidden" name="_method" value="delete">
+      <input type="submit" id="delete" value="Delete This Post" />
+    </form>
+	</div>
+
+</body>
+</html>
